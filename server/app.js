@@ -15,8 +15,9 @@ app.get('/api/host/:listingId', (req, res) => {
 
   const listingId = req.params.listingId;
   db.Host.find({listingId})
-  .then((results) => {
-    res.send(results);
+  .then((data) => {
+    res.status(200);
+    res.json(data[0]);
   })
   .catch((err) => {
     console.log('Did not find listing');
