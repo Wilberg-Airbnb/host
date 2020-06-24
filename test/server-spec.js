@@ -23,8 +23,8 @@ describe('Generate Unique listingIds', function () {
 });
 
 //Integration Test
-
-let server;
+    //make sure to start server if using a path for the request
+    
 chai.use(chaiHttp);
 describe("API Get Request", () => {
   
