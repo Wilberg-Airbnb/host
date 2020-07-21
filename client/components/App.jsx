@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header.jsx';
 
 
 class Host extends React.Component {
@@ -29,7 +30,7 @@ class Host extends React.Component {
       return results.json()
     })
     .then( (data) => {
-      console.log(data);
+      console.log(data)
       this.setState({
       listingId: data.listingId,
       languages: data.languages,
@@ -50,9 +51,10 @@ class Host extends React.Component {
   }
 
   render() {
-    return(
-      <div>Host</div>
-    )
+    return(<div>
+      { this.state.listingId !== null ?
+      <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} /> : null}
+    </div>)
   }
 }
 

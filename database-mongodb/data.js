@@ -30,7 +30,7 @@ const generateHosts = () => {
       "listingId": [shuffledIds.pop()],
       "fullName": faker.name.findName(),
       "joined": faker.date.past(),
-      "photoUrl": faker.image.people(),
+      "photoUrl": faker.image.avatar(),
       "superhost": faker.random.boolean(),
       "verification": faker.random.arrayElement(['Verified', 'Identity verified']),
       "description": faker.lorem.paragraph(),
