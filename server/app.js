@@ -17,7 +17,6 @@ app.use('/:listingId', express.static('public'));
 app.get('/api/host/:listingId', (req, res) => {
 
   const listingId = req.params.listingId;
-  console.log( listingId);
   db.Host.find({listingId})
   .then((data) => {
     res.status(200);

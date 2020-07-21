@@ -53,7 +53,7 @@ class Host extends React.Component {
   render() {
     return(<div>
       { this.state.listingId !== null ?
-      <Header name={this.state.fullName} superhost={this.state.superhost} img={this.state.photoUrl} joined={this.state.joined} /> : null}
+      <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} /> : null}
     </div>)
   }
 }
