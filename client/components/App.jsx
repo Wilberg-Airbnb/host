@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './Header.jsx';
 import Badges from './Badges.jsx';
+import Superhost from './Superhost.jsx';
+import {List, Item} from 'semantic-ui-react';
 
 class Host extends React.Component {
 
@@ -57,7 +59,8 @@ class Host extends React.Component {
         { this.state.listingIds !== null
         ? <div>
           <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} />
-          <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/></div>
+          <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/>
+          <Item.Group><Superhost name={this.state.fullName} /></Item.Group></div>
         : null}
       </div>
     )
