@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Header.jsx';
-
+import Badges from './Badges.jsx';
 
 class Host extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      listingId: window.location.pathname.slice(1, -1),
+      listingIds: null,
       languages: null,
       fullName: null,
       joined: null,
@@ -22,7 +22,7 @@ class Host extends React.Component {
   }
 
   componentDidMount() {
-    const {listingId} = this.state;
+    const listingId = window.location.pathname.slice(1, -1);
     // const url = `http://${window.location.host}/api/location/${listingId}`;
     const url = `http://localhost:2000/api/host/${listingId}`;
     fetch(url, {method: 'GET'})
@@ -32,7 +32,7 @@ class Host extends React.Component {
     .then( (data) => {
       console.log(data)
       this.setState({
-      listingId: data.listingId,
+      listingIds: data.listingId,
       languages: data.languages,
       fullName: data.fullName,
       joined: data.joined,
@@ -51,10 +51,16 @@ class Host extends React.Component {
   }
 
   render() {
-    return(<div>
-      { this.state.listingId !== null ?
-      <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} /> : null}
-    </div>)
+    
+    return(
+      <div>
+        { this.state.listingIds !== null
+        ? <div>
+          <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} />
+          <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/></div>
+        : null}
+      </div>
+    )
   }
 }
 

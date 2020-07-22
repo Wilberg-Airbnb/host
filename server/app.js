@@ -23,8 +23,25 @@ app.get('/api/host/:listingId', (req, res) => {
     res.json(data[0]);
   })
   .catch((err) => {
+    res.status(404);
     console.log('Did not find listing');
   });
+
+});
+
+app.get('/api/reviews', (req, res) => {
+
+
+  console.log(req.query.array);
+  // db.Host.find({listingId})
+  // .then((data) => {
+  //   res.status(200);
+  //   res.json(data[0]);
+  // })
+  // .catch((err) => {
+  //   res.status(404);
+  //   console.log('Did not find listing');
+  // });
 
 });
 
