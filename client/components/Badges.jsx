@@ -10,7 +10,7 @@ const iconStyle = {
 };
 
 const contentStyle = {
-  marginLeft: '8px',
+  marginLeft: '6px',
   display: 'inline'
 }
 
@@ -54,13 +54,6 @@ class Badges extends React.Component {
           {this.state.reviews} Reviews
         </List.Content>
       </List.Item>
-      {this.props.superhost ?
-        <List.Item>
-          <List.Content style={contentStyle}>
-          <i className="material-icons" style={iconStyle}>military_tech</i>
-            Superhost
-          </List.Content>
-        </List.Item>: null}
       {(this.props.verification === "Identity verified") ?
       <List.Item>
         <VerifiedUserRounded style={iconStyle}/>
@@ -69,12 +62,19 @@ class Badges extends React.Component {
         </List.Content>
       </List.Item>
         : 
-      <List.Item>
+        <List.Item>
         <CheckCircleRounded style={iconStyle}/>
         <List.Content style={contentStyle}>
           Verified
         </List.Content>
       </List.Item>}
+        {this.props.superhost ?
+          <List.Item>
+            <List.Content style={contentStyle}>
+            <i className="material-icons" style={iconStyle}>military_tech</i>
+              Superhost
+            </List.Content>
+          </List.Item>: null}
     </List>)
   }
 }

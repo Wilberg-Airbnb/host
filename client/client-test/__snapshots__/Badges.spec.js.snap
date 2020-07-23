@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Components should render initial layout 1`] = `
+Array [
+  <List
+    horizontal={true}
+    relaxed={true}
+  >
+    <ListItem>
+      <Memo(StarRoundedIcon)
+        style={
+          Object {
+            "color": "#FF385C",
+            "verticalAlign": "bottom",
+          }
+        }
+      />
+      <ListContent
+        style={
+          Object {
+            "display": "inline",
+            "marginLeft": "6px",
+          }
+        }
+      >
+         Reviews
+      </ListContent>
+    </ListItem>
+    <ListItem>
+      <Memo(CheckCircleRoundedIcon)
+        style={
+          Object {
+            "color": "#FF385C",
+            "verticalAlign": "bottom",
+          }
+        }
+      />
+      <ListContent
+        style={
+          Object {
+            "display": "inline",
+            "marginLeft": "6px",
+          }
+        }
+      >
+        Verified
+      </ListContent>
+    </ListItem>
+    <ListItem>
+      <ListContent
+        style={
+          Object {
+            "display": "inline",
+            "marginLeft": "6px",
+          }
+        }
+      >
+        <i
+          className="material-icons"
+          style={
+            Object {
+              "color": "#FF385C",
+              "verticalAlign": "bottom",
+            }
+          }
+        >
+          military_tech
+        </i>
+        Superhost
+      </ListContent>
+    </ListItem>
+  </List>,
+]
+`;
