@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Components should render initial layout 1`] = `
+Array [
+  <ItemGroup>
+    <Item>
+      <ItemContent>
+        Response rate: 
+        88
+        %
+      </ItemContent>
+    </Item>
+    <Item>
+      <ItemContent>
+        Response time: 
+        within an hour
+      </ItemContent>
+    </Item>
+    <Item
+      style={
+        Object {
+          "marginTop": "32px",
+        }
+      }
+    >
+      <ItemContent>
+        <button
+          style={
+            Object {
+              "background": "transparent",
+              "borderRadius": "8px",
+              "borderWidth": "1px",
+              "cursor": "pointer",
+              "fontColor": "black",
+              "padding": "13px 23px",
+            }
+          }
+        >
+          <h3>
+            Contact host
+          </h3>
+        </button>
+      </ItemContent>
+    </Item>
+    <Item
+      style={
+        Object {
+          "marginTop": "24px",
+        }
+      }
+    >
+      <ItemContent
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <Memo(SecurityRoundedIcon)
+          style={
+            Object {
+              "display": "block",
+              "marginRight": "16px",
+            }
+          }
+        />
+        To Protect your payment, never transfer money or communicate outside of the Airbnb website or app.
+      </ItemContent>
+    </Item>
+  </ItemGroup>,
+]
+`;
