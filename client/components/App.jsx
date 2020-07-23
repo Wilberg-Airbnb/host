@@ -10,7 +10,7 @@ class Host extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      listingId: window.location.pathname.slice(1, -1),
       listingIds: null,
       languages: null,
       fullName: null,
@@ -26,9 +26,9 @@ class Host extends React.Component {
   }
 
   componentDidMount() {
-    const listingId = window.location.pathname.slice(1, -1);
-    // const url = `http://${window.location.host}/api/location/${listingId}`;
-    const url = `http://localhost:2000/api/host/${listingId}`;
+    const listingId = this.state.listingId;
+    const url = `http://${window.location.host}/api/host/${listingId}`;
+    // const url = `http://localhost:2000/api/host/${listingId}`;
     fetch(url, {method: 'GET'})
     .then ( (results) => {
       return results.json()

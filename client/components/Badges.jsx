@@ -35,7 +35,7 @@ class Badges extends React.Component {
     axios.get(url, options)
     .then ( (res) => {
       const reviews = res.data;
-      console.log(reviews);
+      // console.log(reviews);
       this.setState({reviews});
     })
     .then( (err) => {
