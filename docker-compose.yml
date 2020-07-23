@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mongo_host:
+    image: "mongo"
+    container_name: mongo_host
+    # restart: always
+    volumes:  
+      - dbdata:/data/db   
+    # networks:
+    #   - app-network 
+    ports:
+      - "37017:27017"
+  app:
+    image: express
+    container_name: express-mongo-host
+    build: .
+    restart: always
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    ports:
+      - "2000:2000"
+    depends_on:
+      - "mongo_host"
+    command: bash -c "/usr/wait-for-it.sh --timeout=0 mongo_host:27017 && npm run docker"
+volumes:
+  dbdata:
+  node_modules:  
+
