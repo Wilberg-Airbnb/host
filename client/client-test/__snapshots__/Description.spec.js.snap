@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Components should render initial layout 1`] = `
+Array [
+  <ItemGroup>
+    <Item>
+      <ItemContent>
+        <ItemDescription>
+          Explicabo nisi dolorum. Accusantium quam eum sint voluptas molestiae ullam ad. Ipsa est illo doloremque itaque. Excepturi quia reprehenderit qui ex architecto.
+        </ItemDescription>
+      </ItemContent>
+    </Item>
+  </ItemGroup>,
+]
+`;
