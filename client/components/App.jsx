@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header.jsx';
 import Badges from './Badges.jsx';
-import Superhost from './Superhost.jsx';
+import Description from './Description.jsx';
 import {List, Item} from 'semantic-ui-react';
 
 class Host extends React.Component {
@@ -9,7 +9,7 @@ class Host extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+
       listingIds: null,
       languages: null,
       fullName: null,
@@ -62,9 +62,8 @@ class Host extends React.Component {
         ? <div>
           <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} />
           <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/>
-          <Item.Group>
-            {this.state.superhost === true? <Superhost name={this.state.fullName} /> : null}
-          </Item.Group></div>
+          <Description description={this.state.description} name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} duringYourStay={this.state.duringYourStay}/>
+          </div>
         : null}
       </div>
     )
