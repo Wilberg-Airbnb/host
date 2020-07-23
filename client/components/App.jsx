@@ -9,6 +9,7 @@ class Host extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      
       listingIds: null,
       languages: null,
       fullName: null,
@@ -55,12 +56,15 @@ class Host extends React.Component {
   render() {
     
     return(
+
       <div>
         { this.state.listingIds !== null
         ? <div>
           <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} />
           <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/>
-          <Item.Group><Superhost name={this.state.fullName} /></Item.Group></div>
+          <Item.Group>
+            {this.state.superhost === true? <Superhost name={this.state.fullName} /> : null}
+          </Item.Group></div>
         : null}
       </div>
     )

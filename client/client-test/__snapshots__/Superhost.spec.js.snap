@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Components should render initial layout 1`] = `
+Array [
+  <Item>
+    <ItemContent>
+      <h5>
+        Marg
+         is a Superhost
+      </h5>
+      <ItemDescription>
+        Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.
+      </ItemDescription>
+    </ItemContent>
+  </Item>,
+]
+`;

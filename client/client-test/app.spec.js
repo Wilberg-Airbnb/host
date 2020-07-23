@@ -1,5 +1,5 @@
 import React from 'react';
-import Host from '../components/app.jsx';
+import Host from '../components/App.jsx';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
  
@@ -11,14 +11,11 @@ describe('Renders Components', () => {
     component = shallow(<Host/>)
   });
 
-  test("should render initial layout", () => {
+  test("Make sure componentdidMount is successfully called", () => {
+    const componentdidMountSpy = spyOn(Host.prototype, 'componentDidMount');
     const component = shallow(<Host />);
-    expect(component.getElements()).toMatchSnapshot();
+    expect(componentdidMountSpy).toHaveBeenCalledTimes(1);
   });
-
-  // test("should create a map in component state", ()=> {
-  //   expect(component.contains(<Map />)).toBe(false)
-  // });
 
 });
 
