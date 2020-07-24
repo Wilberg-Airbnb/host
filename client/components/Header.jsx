@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 
-const badge = `${window.location.href}superhost_badge.png`;
+const badge = `http://3.12.169.208:2000/public/superhost_badge.png`;
 
 const badgePosition = {
   position: 'absolute',

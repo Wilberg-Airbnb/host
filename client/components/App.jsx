@@ -27,7 +27,7 @@ class Host extends React.Component {
 
   componentDidMount() {
     const listingId = this.state.listingId;
-    const url = `http://ec2-3-12-169-208.us-east-2.compute.amazonaws.com:2000/api/host/${listingId}`;
+    const url = `http://3.12.169.208:2000/api/host/${listingId}`;
     // const url = `http://localhost:2000/api/host/${listingId}`;
     fetch(url, {method: 'GET'})
     .then ( (results) => {
