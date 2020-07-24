@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Button} from 'semantic-ui-react';
+import { Item} from 'semantic-ui-react';
 import Languages from './Languages.jsx';
 import SecurityRoundedIcon from '@material-ui/icons/SecurityRounded';
 
