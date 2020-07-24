@@ -5,13 +5,15 @@ const data = require('./data.js');
 
 const insertHosts = () => {
 
+  if(db.Host.count() === 0) {
     db.Host.create(data.generateHosts())
-    .then( () => {
-      db.mongoose.disconnect();
-    })
     .catch( (err) => {
       console.log(err);
     });
+
+    
+  }
+  return db.mongoose.disconnect();
 
 };
 

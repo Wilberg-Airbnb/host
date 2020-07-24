@@ -1,8 +1,7 @@
 import React from 'react';
-import {Icon, Segment, List, Grid} from 'semantic-ui-react';
+import {List} from 'semantic-ui-react';
 import axios from 'axios';
 import { VerifiedUserRounded, StarRounded, CheckCircleRounded } from '@material-ui/icons';
-// import VerifiedUserRoundedIcon from '@material-ui/icons/Veri';
 
 const iconStyle = {
   color: '#FF385C',
