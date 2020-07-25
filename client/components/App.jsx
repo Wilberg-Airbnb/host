@@ -5,6 +5,7 @@ import Description from './Description.jsx';
 import Contact from './Contact.jsx';
 import {Grid, Container} from 'semantic-ui-react';
 
+
 class Host extends React.Component {
 
   constructor(props) {
