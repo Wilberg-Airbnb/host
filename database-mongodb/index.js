@@ -4,7 +4,6 @@ module.exports.mongoose = mongoose;
 
 mongoose.Promise = require('bluebird');
 
-// const url = 'mongodb://localhost/airbrb-host';
 const url = 'mongodb://mongo_host:27017/airbrb-host'
 mongoose.connect(url, {
   useNewUrlParser: true,

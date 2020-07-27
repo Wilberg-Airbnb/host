@@ -1,11 +1,12 @@
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const db = require('../database-mongodb/index.js');
 const cors = require('cors');
-const compression = require('compression');
 
+
+app.use(compression());
 app.use(cors());
-// app.use(compression);
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -14,6 +15,12 @@ app.use(express.urlencoded({extended: true}));
 
 //to match with other microservices
 app.use('/:listingId', express.static('public'));
+
+app.get('*.js', (req, res, next) => {
+	req.url = req.url + '.gz';
+	res.set('Content-Encoding', 'gzip');
+	next();
+});
 
 
 app.get('/api/host/:listingId', (req, res) => {

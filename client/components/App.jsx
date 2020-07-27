@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header.jsx';
-import Badges from './Badges.jsx';
+// import Badges from './Badges.jsx';
 import Description from './Description.jsx';
 import Contact from './Contact.jsx';
 import {Grid, Container} from 'semantic-ui-react';
@@ -67,8 +67,8 @@ class Host extends React.Component {
           <Grid columns={2} relaxed stackable>
             <Grid.Column>
               <Container>
-              <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/>
-              <Description description={this.state.description} name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} duringYourStay={this.state.duringYourStay}/>
+              {/* <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/> */}
+              <Description description={this.state.description} verification={this.state.verification} listingIds={this.state.listingIds} name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} duringYourStay={this.state.duringYourStay}/>
             </Container>             
             </Grid.Column>
             <Grid.Column>

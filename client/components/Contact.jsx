@@ -13,7 +13,7 @@ const contactButtonStyle = {
 }
 
 const Contact = ({languages, responseRate, responseTime}) => (
-  <Item.Group>
+  <Item.Group style={{padding: '0px'}}>
     {languages.length > 0 ? <Languages languages={languages}/> : null}
     <Item>
       <Item.Content>
