@@ -5,7 +5,7 @@ const badge = `http://3.12.169.208:2000/public/superhost_badge.png`;
 
 const badgePosition = {
   position: 'absolute',
-  left: '47px',
+  left: '75px',
   top: '35px'
 };
 
