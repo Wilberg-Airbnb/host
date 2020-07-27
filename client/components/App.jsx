@@ -35,7 +35,7 @@ class Host extends React.Component {
       return results.json()
     })
     .then( (data) => {
-      console.log(data)
+      // console.log(data)
       this.setState({
       listingIds: data.listingId,
       languages: data.languages,
