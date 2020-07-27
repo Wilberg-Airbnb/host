@@ -1,5 +1,5 @@
 import React from 'react';
-import {List,Grid, Segment} from 'semantic-ui-react';
+import {List} from 'semantic-ui-react';
 import axios from 'axios';
 import { VerifiedUserRounded, StarRounded, CheckCircleRounded } from '@material-ui/icons';
 
@@ -14,7 +14,7 @@ const contentStyle = {
 }
 
 const itemStyle = {
-  padding: '0px 12px 0px 12px',
+  padding: '0px 24px 0px 0px',
   margin: '0px'
 }
 
@@ -52,7 +52,7 @@ class Badges extends React.Component {
  
     return(
 
-    <List stackable horizontal >
+    <List horizontal >
       <List.Item style={itemStyle}>
         <StarRounded style={iconStyle}/>
         <List.Content style={contentStyle}>
