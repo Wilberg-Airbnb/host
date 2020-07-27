@@ -1,7 +1,7 @@
 
 
 module.exports = {
-  plugins: [new CompressionPlugin()],
+ 
   entry: __dirname + '/client/index.jsx',
   module: {
     rules: [
