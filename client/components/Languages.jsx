@@ -2,7 +2,7 @@ import React from 'react';
 import { Item } from 'semantic-ui-react';
 
 const Languages = ({languages}) => (
-  <Item>
+  <Item style={{marginTop: '0px'}}>
     <Item.Content>
       <Item.Description>
         Languages: {languages.join(', ')}

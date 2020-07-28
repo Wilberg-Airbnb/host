@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header.jsx';
-import Badges from './Badges.jsx';
+// import Badges from './Badges.jsx';
 import Description from './Description.jsx';
 import Contact from './Contact.jsx';
 import {Grid, Container} from 'semantic-ui-react';
@@ -35,7 +35,7 @@ class Host extends React.Component {
       return results.json()
     })
     .then( (data) => {
-      console.log(data)
+      // console.log(data)
       this.setState({
       listingIds: data.listingId,
       languages: data.languages,
@@ -64,14 +64,14 @@ class Host extends React.Component {
         { this.state.listingIds !== null
         ? <div>
           <Header name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} img={this.state.photoUrl} joined={this.state.joined} />
-          <Grid columns={2} relaxed stackable>
-            <Grid.Column>
+          <Grid columns={2} style={{marginLeft: '0px', paddingLeft: '0px'}} stackable>
+            <Grid.Column style={{marginLeft: '0px', paddingLeft: '0px'}}>
               <Container>
-              <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/>
-              <Description description={this.state.description} name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} duringYourStay={this.state.duringYourStay}/>
+              {/* <Badges superhost={JSON.parse(this.state.superhost)} verification={this.state.verification} listingIds={this.state.listingIds}/> */}
+              <Description description={this.state.description} verification={this.state.verification} listingIds={this.state.listingIds} name={this.state.fullName} superhost={JSON.parse(this.state.superhost)} duringYourStay={this.state.duringYourStay}/>
             </Container>             
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column style={{marginLeft: '0px', paddingLeft: '0px'}}>
               <Container>
               <Contact languages={this.state.languages} responseRate={this.state.responseRate} responseTime={this.state.responseTime}/>
               </Container>
