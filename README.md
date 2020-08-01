@@ -57,24 +57,21 @@ Host Service is a microservice for our Airbnb clone, Airbrb. It is created with 
 ## Requirements
 
 - Node 6.13.0
+- React 16.13.1
 - Express 4.17
 - Mongoose 5.9.19
 - MongoDB 4.2.6
 - Bluebird 3.7.2
 - Faker 4.1.0
-
-## Development
+- Semanitic UI React
+- Material UI
 
 ## Installation and Setup
-
-Setting up config.js file
-  -add key
-  -change file name from config_copy.js to config.js
   
 From within the root directory:
 
 ```sh
-- $ npm install --save express mongoose bluebird faker
+- $ npm install
 - $ npm run seed 
 - $ npm run server-dev
 ```
