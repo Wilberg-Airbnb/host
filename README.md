@@ -1,19 +1,29 @@
 # FEC - Host Service for Airbnb Item Page
 
-> Host Service module clone of Airbnb's created with Node.js, React and MongoDB
+Host Service is a microservice for our Airbnb clone, Airbrb. It is created with Node.js, React and MongoDB
+
+![](Host.gif)
+
+  >Airbnb users will be able to read more about the host and see if the host is a superhost and verified.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - Trello Board: https://trello.com/b/dR6Qp3HX/fec-airbrb
+  - Github: https://github.com/Wilberg-Airbnb
+  - https://github.com/Wilberg-Airbnb/reservation
+  - https://github.com/Wilberg-Airbnb/reviews
+  - https://github.com/Wilberg-Airbnb/suggestion
+  - https://github.com/Wilberg-Airbnb/photos
+  - https://github.com/Wilberg-Airbnb/location
+  - https://github.com/Wilberg-Airbnb/description
+
 
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+2. [Requirements](#requirements)
+3. [Installation and Setup](#InstallationandSetup)
+4. [Deployment](#deployment)
 
 ## Usage
 
@@ -21,6 +31,7 @@
   - GET Endpoint: /api/location/:listingId (GET: /api/location/0)
 
     Sample Output:
+    ```json
         {
             "listingId": [
                 0,
@@ -41,22 +52,43 @@
             "responseTime": "within an hour",
             "__v": 0
         }
+    ```
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
 - Node 6.13.0
-- etc
+- Express 4.17
+- Mongoose 5.9.19
+- MongoDB 4.2.6
+- Bluebird 3.7.2
+- Faker 4.1.0
 
 ## Development
 
-### Installing Dependencies
+## Installation and Setup
 
+Setting up config.js file
+  -add key
+  -change file name from config_copy.js to config.js
+  
 From within the root directory:
 
 ```sh
-npm install -g webpack
-npm install
+- $ npm install --save express mongoose bluebird faker
+- $ npm run seed 
+- $ npm run server-dev
 ```
 
+Service renders at:
+    <div id="host"></div>
+
+- if proxy server URL is: domain/:listingId/ then Bundle.js url: http://localhost:2000/public/bundle.js
+- if proxy server URL is: domain?id=:listingId then Bundle.js url: http://localhost:2000/bundle.js
+
+## Deployment
+
+Create a Docker image and spin a container by running docker-compose.yml
+
+```sh
+docker-compose up
+```
