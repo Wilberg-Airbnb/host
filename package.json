@@ -9,6 +9,7 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
+    "react-prod": "webpack -p --watch",
     "docker": "concurrently \"node database-mongodb/seed.js\" \"node ./server/index.js --ignore node_modules\"",
     "server-dev": "nodemon ./server/index.js",
     "seed": "node database-mongodb/seed.js",
