@@ -1,6 +1,6 @@
-# FEC - Host Service for Airbnb Item Page
+# Host Microservice
 
-Host Service is a microservice for our Airbnb clone, Airbrb. It is created with Node.js, React and MongoDB
+A microservice for Airbnb Item Detail Page clone, Airbrb. It is created with Node.js, React and MongoDB
 
 ![](Host.gif)
 
@@ -10,11 +10,11 @@ Host Service is a microservice for our Airbnb clone, Airbrb. It is created with 
 
   - Trello Board: https://trello.com/b/dR6Qp3HX/fec-airbrb
   - Github: https://github.com/Wilberg-Airbnb
+  - **https://github.com/Wilberg-Airbnb/location** (microservice I developed)
   - https://github.com/Wilberg-Airbnb/reservation
   - https://github.com/Wilberg-Airbnb/reviews
   - https://github.com/Wilberg-Airbnb/suggestion
   - https://github.com/Wilberg-Airbnb/photos
-  - https://github.com/Wilberg-Airbnb/location
   - https://github.com/Wilberg-Airbnb/description
 
 
@@ -71,9 +71,9 @@ Host Service is a microservice for our Airbnb clone, Airbrb. It is created with 
 From within the root directory:
 
 ```sh
-- $ npm install
-- $ npm run seed 
-- $ npm run server-dev
+ $ npm install
+ $ npm run seed 
+ $ npm run server-dev
 ```
 
 Service renders at:
