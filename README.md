@@ -22,7 +22,7 @@ A microservice for Airbnb Item Detail Page clone, Airbrb. It is created with Nod
 
 1. [Usage](#Usage)
 2. [Requirements](#Requirements)
-3. [Installation and Setup](#InstallationandSetup)
+3. [Installation and Setup](#Installation-and-Setup)
 4. [Deployment](#Deployment)
 
 ## Usage
