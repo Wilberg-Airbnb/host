@@ -21,9 +21,9 @@ A microservice for Airbnb Item Detail Page clone, Airbrb. It is created with Nod
 ## Table of Contents
 
 1. [Usage](#Usage)
-2. [Requirements](#requirements)
-3. [Installation and Setup](#InstallationandSetup)
-4. [Deployment](#deployment)
+2. [Requirements](#Requirements)
+3. [Installation and Setup](#Installation and Setup)
+4. [Deployment](#Deployment)
 
 ## Usage
 
